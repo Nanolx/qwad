@@ -212,6 +212,7 @@ class MWQwad(QMainWindow, Ui_Qwad):
         if self.comboBox.findText(selection) != 0:
             self.enteredTitleID.enabled = False
             self.enteredTitleID.setText(TitleIDs.TitleDict[str(selection)])
+            self.availableVersions.setText(TitleIDs.IOSdict[str(selection)])
 
     @pyqtSignature("")
     def on_enteredTitleID_returnPressed(self):

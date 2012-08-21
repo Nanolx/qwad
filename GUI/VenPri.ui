@@ -46,7 +46,7 @@
      <bool>false</bool>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="unpacktab">
      <attribute name="title">
@@ -154,13 +154,13 @@
        <string>TMD file</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>50</y>
         <width>451</width>
-        <height>147</height>
+        <height>151</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout">
@@ -525,8 +525,8 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>80</y>
+        <x>40</x>
+        <y>120</y>
         <width>171</width>
         <height>23</height>
        </rect>
@@ -541,8 +541,8 @@
      <widget class="QCheckBox" name="pack_in_WAD_checkbox">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>110</y>
+        <x>220</x>
+        <y>120</y>
         <width>181</width>
         <height>23</height>
        </rect>
@@ -557,7 +557,7 @@
      <widget class="QLineEdit" name="VersionlineEdit">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>350</x>
         <y>45</y>
         <width>71</width>
         <height>31</height>
@@ -577,7 +577,33 @@
        </rect>
       </property>
       <property name="text">
-       <string>Version:</string>
+       <string>Version</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="availableLabel">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>79</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Available Versions</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="availableVersions">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>80</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>unset</string>
       </property>
      </widget>
     </widget>
@@ -589,7 +615,7 @@
      <x>0</x>
      <y>0</y>
      <width>481</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAyuda">
