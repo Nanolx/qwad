@@ -1,0 +1,44 @@
+--** Qwad **--
+
+Qwad is a Python-Qt utility to manage Wad files.
+
+Features:
+
+* NUS Downloader
+  - download any IOS / Channel from NUS
+  - decrypt
+  - pack as wad
+  - choose filename
+  - choose version to download (available are displayed)
+
+* Unpack Wad
+  - unpack wad to make modification or inspect content
+
+* Repack Wad
+  - repack (modified) wad, ready for install on Wii
+
+* TMD Viewer
+  - view contents of TMD
+
+TODO:
+
+* NUS Downloader
+  - add new IOS [DONE]
+  - add new Channels [DONE]
+  - display available Versions [DONE]
+  - improve Channel downloader [WIP]
+  - display descriptions [  ]
+
+* General GUI
+  - German Translation [  ]
+  - UI improvments [WIP]
+
+* General CLI
+  - commandline params for automated actions [  ]
+
+* Other
+  - extract bootmii nand.bin [  ]
+
+USING:
+
+either do 'make install' or directly call 'python2 ./Qwad.pyw'
