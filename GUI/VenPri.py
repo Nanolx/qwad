@@ -25,6 +25,7 @@ class MWQwad(QMainWindow, Ui_Qwad):
         QMainWindow.__init__(self, parent)
         self.setupUi(self)
         self.defaultversion = self.trUtf8("""(Latest)""")
+	self.availableVersions.setText("(---)")
         self.VersionlineEdit.setText(self.defaultversion)
         for key in TitleIDs.sorted_copy(TitleIDs.TitleDict):
             self.comboBox.addItem(key)
