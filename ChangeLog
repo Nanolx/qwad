@@ -2,6 +2,8 @@
 * add new IOS to downloader
 * show available versions of selected IOS in downloader
 * downloading channels is currently not possible
+* logical sorting of IOS in downloader (IOS4 is the first, not after IOS39)
+  taken from: [http://code.activestate.com/recipes/135435/]
 
 -- 0.3 --
 * Updated some porject's files which still referenced wii signer
