@@ -5,6 +5,7 @@
 * logical sorting of IOS in downloader (IOS4 is the first, not after IOS39)
   taken from: [http://code.activestate.com/recipes/135435/]
 * ensure Python 2.x is used, Python 3.x is not yet supported
+* separate combobox for choosing channels, system-menu in downloader [WIP]
 
 -- 0.3 --
 * Updated some porject's files which still referenced wii signer

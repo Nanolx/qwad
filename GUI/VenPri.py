@@ -28,7 +28,9 @@ class MWQwad(QMainWindow, Ui_Qwad):
         self.VersionlineEdit.setText(self.defaultversion)
         for key in TitleIDs.sorted_copy(TitleIDs.TitleDict):
             self.comboBox.addItem(key)
-        for ios in sorted(TitleIDs.IOSdict):
+        for key in TitleIDs.sorted_copy(TitleIDs.ChannelDict):
+            self.comboBox2.addItem(key)
+        for ios in TitleIDs.sorted_copy(TitleIDs.IOSdict):
             self.IOSversion.addItem(ios)
         self.getReady()
 
@@ -42,7 +44,6 @@ class MWQwad(QMainWindow, Ui_Qwad):
         self.statusBar.showMessage(self.trUtf8("Ready"))
         os.chdir(CWD)
         print "Done."
-
 
     def ErrorDiag(self, error = QT_TR_NOOP("Unknown error")):
             print error
@@ -212,6 +213,16 @@ class MWQwad(QMainWindow, Ui_Qwad):
         if self.comboBox.findText(selection) != 0:
             self.enteredTitleID.enabled = False
             self.enteredTitleID.setText(TitleIDs.TitleDict[str(selection)])
+            self.availableVersions.setText(TitleIDs.IOSdict[str(selection)])
+
+    @pyqtSignature("QString")
+    def on_comboBox2_currentIndexChanged(self, selection):
+        """
+        Show the title ID of the selected title
+        """
+        if self.comboBox2.findText(selection) != 0:
+            self.enteredTitleID.enabled = False
+            self.enteredTitleID.setText(TitleIDs.ChannelDict[str(selection)])
             self.availableVersions.setText(TitleIDs.IOSdict[str(selection)])
 
     @pyqtSignature("")

@@ -509,13 +509,13 @@
        <rect>
         <x>125</x>
         <y>10</y>
-        <width>291</width>
+        <width>121</width>
         <height>25</height>
        </rect>
       </property>
       <item>
        <property name="text">
-        <string>Custom title ID</string>
+        <string>Choose IOS</string>
        </property>
       </item>
      </widget>
@@ -605,6 +605,21 @@
       <property name="text">
        <string>unset</string>
       </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox2">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>10</y>
+        <width>121</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Choose Channel</string>
+       </property>
+      </item>
      </widget>
     </widget>
    </widget>
