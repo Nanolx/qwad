@@ -1,0 +1,28 @@
+-- 0.4 --
+* add new IOS to downloader
+* show available versions of selected IOS in downloader
+* downloading channels is currently not possible
+
+-- 0.3 --
+* Updated some porject's files which still referenced wii signer
+* Added application's name and organization
+* Now NUS title combobox is displayed sorteed
+* Fixed everyone votes channel not returning a correct titleid
+* Added some IOS to the dictionary
+* Now can display the data stored in a TMD file.
+
+-- 0.2 --
+* Backend changed from Wii Signer to the awesome Wii.py
+* Added support form downloading and packing wads from NUS
+* Added statusbar
+* Now the backend runs in a different thread
+
+Known bugs:
+* Title names and some statusbar messages don't get translated
+* Title dictionary is incomplete. Additionally, there may be titles in the combobox which aren't actually in the NUS.
+
+-- 0.1.1 --
+* Fixed open modes and paths in order to work in Windows
+* Independization from Wii Signer, due to needed changes to the original code. Now Qwad isn't a frontend anymore.
+
+-- 0.1 - First public version --
