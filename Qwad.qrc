@@ -1,0 +1,7 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource>
+<file>icons/wad.png</file>
+<file>icons/qt4.png</file>
+</qresource>
+</RCC>

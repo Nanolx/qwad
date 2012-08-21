@@ -1,0 +1,7 @@
+Dependencies:
+Python 2.5 or higher
+(Windows installer: )
+PyQt4
+(Windows installer: )
+PyCrypto
+(Windows installer: http://www.voidspace.org.uk/python/modules.shtml#pycrypto )
