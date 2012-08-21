@@ -12,3 +12,8 @@ install:
 uninstall:
 	rm -f $(DESTDIR)/usr/bin/qwad
 	rm -rf $(DESTDIR)/usr/share/Qwad/
+
+update-trans:
+	pylupdate4 Qwad.pro
+	mv *.ts i18n/
+	sed -e 's,filename=\",filename=\"../,g' -i i18n/*.ts

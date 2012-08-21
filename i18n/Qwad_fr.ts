@@ -1,79 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1">
+<!DOCTYPE TS><TS version="2.0">
 <context>
     <name>@default</name>
     <message>
-        <location filename="TitleIDs.py" line="40"/>
-        <source>Nintendo Channel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="TitleIDs.py" line="44"/>
-        <source>Everyone Votes Channel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="TitleIDs.py" line="46"/>
-        <source>Photo Channel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="TitleIDs.py" line="47"/>
-        <source>Shopping Channel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="TitleIDs.py" line="48"/>
-        <source>Mii Channel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="TitleIDs.py" line="49"/>
-        <source>Photo Channel 1.1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/VenPri.py" line="43"/>
+        <location filename="../GUI/VenPri.py" line="49"/>
         <source>Unknown error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="TitleIDs.py" line="37"/>
-        <source>Photo Channel 1.1 [PAL]</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="TitleIDs.py" line="41"/>
-        <source>Check Mii Out / Mii Contest Channel[USA]</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="TitleIDs.py" line="42"/>
-        <source>Check Mii Out / Mii Contest Channel[PAL]</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="TitleIDs.py" line="43"/>
-        <source>Check Mii Out / Mii Contest Channel[JAP]</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/VenPri.py" line="225"/>
+        <location filename="../GUI/VenPri.py" line="347"/>
         <source>Downloading files from NUS... This may take a while, please, be patient.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/VenPri.py" line="226"/>
+        <location filename="../GUI/VenPri.py" line="348"/>
         <source>Unpacking WAD...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/VenPri.py" line="227"/>
+        <location filename="../GUI/VenPri.py" line="349"/>
         <source>Packing into WAD...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/VenPri.py" line="229"/>
+        <location filename="../GUI/VenPri.py" line="350"/>
         <source>Cleaning temporary files...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -81,12 +31,12 @@
 <context>
     <name>Dialog</name>
     <message>
-        <location filename="GUI/Ui_AboutQwad.py" line="66"/>
+        <location filename="../GUI/Ui_AboutQwad.py" line="66"/>
         <source>Dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/Ui_AboutQwad.py" line="71"/>
+        <location filename="../GUI/Ui_AboutQwad.py" line="67"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -95,7 +45,17 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/Ui_AboutQwad.py" line="752"/>
+        <location filename="../GUI/Ui_AboutQwad.py" line="72"/>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_AboutQwad.py" line="73"/>
+        <source>Author: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_AboutQwad.py" line="74"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -778,224 +738,294 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/Ui_AboutQwad.py" line="72"/>
-        <source>Version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_AboutQwad.py" line="73"/>
-        <source>Author: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_AboutQwad.py" line="753"/>
+        <location filename="../GUI/Ui_AboutQwad.py" line="753"/>
         <source>License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/Ui_AboutQwad.py" line="755"/>
-        <source>Thanks</source>
+        <location filename="../GUI/Ui_AboutQwad.py" line="754"/>
+        <source>Thanks to Wii.py team: Xuzz, SquidMan, megazig, TheLemonMan, |Omega, and Matt_P. Qwad is only a frontend for their unbelievably awesome framework.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/Ui_AboutQwad.py" line="754"/>
-        <source>Thanks to Wii.py team: Xuzz, SquidMan, megazig, TheLemonMan, |Omega, and Matt_P. Qwad is only a frontend for their unbelievably awesome framework.</source>
+        <location filename="../GUI/Ui_AboutQwad.py" line="755"/>
+        <source>Thanks</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>MWQwad</name>
     <message>
-        <location filename="GUI/VenPri.py" line="45"/>
-        <source>Error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/VenPri.py" line="180"/>
-        <source>*.wad; *.WAD</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/VenPri.py" line="145"/>
-        <source>About Qt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/VenPri.py" line="59"/>
-        <source>Select WAD file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/VenPri.py" line="73"/>
-        <source>Select where to store WAD contents</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/VenPri.py" line="97"/>
-        <source>Select where to save the newly created WAD</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/VenPri.py" line="111"/>
-        <source>Select folder to pack into WAD</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/VenPri.py" line="27"/>
+        <location filename="../GUI/VenPri.py" line="27"/>
         <source>(Latest)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/VenPri.py" line="39"/>
+        <location filename="../GUI/VenPri.py" line="45"/>
         <source>Ready</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/VenPri.py" line="46"/>
+        <location filename="../GUI/VenPri.py" line="51"/>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/VenPri.py" line="51"/>
         <source>An error has ocurred:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/VenPri.py" line="178"/>
+        <location filename="../GUI/VenPri.py" line="79"/>
+        <source>Select WAD file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/VenPri.py" line="194"/>
+        <source>*.wad; *.WAD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/VenPri.py" line="93"/>
+        <source>Select where to store WAD contents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/VenPri.py" line="117"/>
+        <source>Select where to save the newly created WAD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/VenPri.py" line="131"/>
+        <source>Select folder to pack into WAD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/VenPri.py" line="166"/>
+        <source>About Qt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/VenPri.py" line="194"/>
         <source>Select where to save the downloaded WAD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/VenPri.py" line="185"/>
+        <location filename="../GUI/VenPri.py" line="201"/>
         <source>Select the directory where store the downloaded files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/VenPri.py" line="265"/>
+        <source>Select a TMD file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/VenPri.py" line="265"/>
+        <source>tmd; TMD</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Qwad</name>
     <message>
-        <location filename="GUI/Ui_VenPri.py" line="141"/>
-        <source>Ruta hacia el archivo WAD que quieres desempaquetar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_VenPri.py" line="143"/>
-        <source>Carpeta donde se almacenaran los contenidos del archivo WAD</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_VenPri.py" line="154"/>
-        <source>Carpeta y nombre del nuevo WAD</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_VenPri.py" line="149"/>
-        <source>Ruta hacia la carpeta que empaquetar en WAD</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_VenPri.py" line="167"/>
-        <source>About Qt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_VenPri.py" line="168"/>
-        <source>About Wii Signer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_VenPri.py" line="146"/>
-        <source>Unpack WAD</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_VenPri.py" line="142"/>
-        <source>WAD file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_VenPri.py" line="155"/>
-        <source>Output</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_VenPri.py" line="145"/>
-        <source>Unpack</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_VenPri.py" line="152"/>
-        <source>Pack WAD</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_VenPri.py" line="150"/>
-        <source>Folder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_VenPri.py" line="151"/>
-        <source>Pack</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_VenPri.py" line="165"/>
-        <source>Help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_VenPri.py" line="166"/>
-        <source>About Qwad</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/Ui_VenPri.py" line="140"/>
+        <location filename="../GUI/Ui_VenPri.py" line="234"/>
         <source>Qwad - a WAD management tool</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/Ui_VenPri.py" line="164"/>
-        <source>Download from NUS</source>
+        <location filename="../GUI/Ui_VenPri.py" line="241"/>
+        <source>Ruta hacia el archivo WAD que quieres desempaquetar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/Ui_VenPri.py" line="153"/>
-        <source>Download</source>
+        <location filename="../GUI/Ui_VenPri.py" line="236"/>
+        <source>WAD file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/Ui_VenPri.py" line="156"/>
-        <source>000000000000000000</source>
+        <location filename="../GUI/Ui_VenPri.py" line="237"/>
+        <source>Carpeta donde se almacenaran los contenidos del archivo WAD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/Ui_VenPri.py" line="157"/>
+        <location filename="../GUI/Ui_VenPri.py" line="263"/>
+        <source>Output</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="239"/>
+        <source>Unpack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="240"/>
+        <source>Unpack WAD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="242"/>
+        <source>TMD file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="265"/>
         <source>Title ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/Ui_VenPri.py" line="158"/>
+        <location filename="../GUI/Ui_VenPri.py" line="244"/>
+        <source>0000000000000000</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="245"/>
+        <source>ID (ascii)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="246"/>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="247"/>
+        <source>0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="248"/>
+        <source>Title type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="249"/>
+        <source>IOS needed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="250"/>
+        <source>Group ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="251"/>
+        <source>Boot index</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="252"/>
+        <source>Access rights</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="253"/>
+        <source>Contents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="254"/>
+        <source>TMD viewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="262"/>
+        <source>Carpeta y nombre del nuevo WAD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="257"/>
+        <source>Ruta hacia la carpeta que empaquetar en WAD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="258"/>
+        <source>Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="259"/>
+        <source>Pack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="260"/>
+        <source>Pack WAD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="261"/>
+        <source>Download</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="264"/>
+        <source>000000000000000000</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="266"/>
         <source>Choose title:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/Ui_VenPri.py" line="159"/>
-        <source>Custom title ID</source>
+        <location filename="../GUI/Ui_VenPri.py" line="267"/>
+        <source>Choose IOS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/Ui_VenPri.py" line="160"/>
+        <location filename="../GUI/Ui_VenPri.py" line="268"/>
+        <source>Choose Channel/Menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="269"/>
         <source>Decrypt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/Ui_VenPri.py" line="161"/>
+        <location filename="../GUI/Ui_VenPri.py" line="270"/>
         <source>Pack into WAD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/Ui_VenPri.py" line="162"/>
+        <location filename="../GUI/Ui_VenPri.py" line="274"/>
         <source>unset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/Ui_VenPri.py" line="163"/>
+        <location filename="../GUI/Ui_VenPri.py" line="272"/>
         <source>Version:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="273"/>
+        <source>Available Versions:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="275"/>
+        <source>Download from NUS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="276"/>
+        <source>Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="277"/>
+        <source>About Qwad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="278"/>
+        <source>About Qt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../GUI/Ui_VenPri.py" line="279"/>
+        <source>About Wii Signer</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
