@@ -43,6 +43,10 @@ def _generate_index(str):
     _append(current_fragment)
     return tuple(index)
 
+def swap_dic(original_dict):
+	####################### Swap Keys and Values of a dictionary ######################
+	return dict([(v, k) for (k, v) in original_dict.iteritems()])
+
 TitleDict = {
 "IOS4":"0000000100000004",
 "IOS9":"0000000100000009",
@@ -84,6 +88,8 @@ TitleDict = {
 "IOS61":"000000010000003d",
 "IOS70":"0000000100000046",
 "IOS80":"0000000100000050", }
+
+TitleSwapDict = swap_dic(TitleDict)
 
 ChannelDict = {
 "BOOT2":"0000000100000001",

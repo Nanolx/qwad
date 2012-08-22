@@ -11,6 +11,7 @@ from shutil import rmtree
 from threading import Thread
 import TitleIDs
 import tempfile, os, time
+import binascii
 
 CWD = os.getcwd()
 
@@ -31,8 +32,6 @@ class MWQwad(QMainWindow, Ui_Qwad):
             self.comboBox.addItem(key)
         for key in TitleIDs.sorted_copy(TitleIDs.ChannelDict):
             self.comboBox2.addItem(key)
-        for ios in TitleIDs.sorted_copy(TitleIDs.IOSdict):
-            self.IOSversion.addItem(ios)
         self.getReady()
 
     def Status(self,status):
@@ -61,11 +60,11 @@ class MWQwad(QMainWindow, Ui_Qwad):
         """
         tmd = TMD().loadFile(tmdpath)
         self.TitleID.setText("%016x" % tmd.tmd.titleid)
-#        print tmd.tmd.version
-        #self.IOSversion.setText("%016x" % tmd.tmd.iosversion)
+        self.idASCII.setText("%s" % binascii.unhexlify(str(tmd.tmd.titleid)[7:]))
+        self.IOSversion.setText(TitleIDs.TitleSwapDict["%s" % ("%016x" % tmd.tmd.iosversion)])
         self.TitleType.setText(str(tmd.tmd.title_type))
         self.GroupID.setText(str(tmd.tmd.group_id))
-#        print tmd.tmd.reserved
+        self.Reserved.setText(str(tmd.tmd.reserved))
         self.AccessRights.setText(str(tmd.tmd.access_rights))
         self.Version.setText(str(tmd.tmd.title_version))
         self.Contents.setText(str(tmd.tmd.numcontents))

@@ -8,6 +8,11 @@
 * separate combobox for choosing channels, system-menu in downloader
   as of now, region-code must be changed manually (instructions given)
 * changed order of tabs, downloader is now default tab
+* improved TMD Viewer
+  - display title ID as ascii
+  - display reserved
+  - display required IOS (properly)
+  - use QLabel instead of QLineEdit
 
 -- 0.3 --
 * Updated some porject's files which still referenced wii signer
