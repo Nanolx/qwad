@@ -13,6 +13,7 @@
   - display reserved
   - display required IOS (properly)
   - use QLabel instead of QLineEdit
+* improved about dialog
 
 -- 0.3 --
 * Updated some porject's files which still referenced wii signer
