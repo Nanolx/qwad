@@ -10,9 +10,9 @@ from PyQt4.QtCore import pyqtSignature
 from Ui_AboutQwad import Ui_Dialog
 
 def Version():
-    return "0.2+svn"
+    return "0.4~git"
 def Author():
-    return "ssorgatem <ssorgatem@esdebian.org>"
+    return "Christopher Roy Bratusek <nano@tuxfamily.org>"
 
 class AboutQwad(QDialog, Ui_Dialog):
     """
