@@ -46,7 +46,7 @@
      <bool>false</bool>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="unpacktab">
      <attribute name="title">
@@ -539,7 +539,7 @@
        <rect>
         <x>40</x>
         <y>120</y>
-        <width>171</width>
+        <width>111</width>
         <height>23</height>
        </rect>
       </property>
@@ -553,9 +553,9 @@
      <widget class="QCheckBox" name="pack_in_WAD_checkbox">
       <property name="geometry">
        <rect>
-        <x>220</x>
+        <x>150</x>
         <y>120</y>
-        <width>181</width>
+        <width>131</width>
         <height>23</height>
        </rect>
       </property>
@@ -630,6 +630,36 @@
       <item>
        <property name="text">
         <string>Choose Channel</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="ChooseRegion">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>120</y>
+        <width>161</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Choose a Region</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>JAP</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>USA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>PAL</string>
        </property>
       </item>
      </widget>

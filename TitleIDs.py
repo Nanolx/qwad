@@ -47,6 +47,8 @@ def swap_dic(original_dict):
 	####################### Swap Keys and Values of a dictionary ######################
 	return dict([(v, k) for (k, v) in original_dict.iteritems()])
 
+SupportedRegions = [ "JAP", "USA", "PAL" ]
+
 TitleDict = {
 "IOS4":"0000000100000004",
 "IOS9":"0000000100000009",
@@ -91,69 +93,151 @@ TitleDict = {
 
 TitleSwapDict = swap_dic(TitleDict)
 
-ChannelDict = {
+ChannelJAPDict = {
 "BOOT2":"0000000100000001",
-"System Menu [JAP]":"0000000100000002",
-"System Menu [PAL]":"0000000100000002",
-"System Menu [KOR]":"0000000100000002",
-"System Menu [USA]":"0000000100000002",
+"System Menu":"0000000100000002",
 "BC":"0000000100000100",
 "MIOS":"0000000100000101",
-"BBC iPlayer [PAL]":"0001000148434A50",
-"Check Mii Out":"00010001484150**",
-"Digicam Print [JAP]":"000100014843444A",
-"EULA":"0001000848414B**",
-"Everyone Votes":"0001000148414A**",
-"Jam With The Band":"00010001484341**",
-"Japan Food Service [JAP]":"000100084843434A",
-"Mii Channel [ALL]":"0001000248414341",
+"Check Mii Out":"000100014841504A",
+"Digicam Print":"000100014843444A",
+"EULA":"0001000848414B4A",
+"Everyone Votes":"0001000148414A4A",
+"Jam With The Band":"000100014843414A",
+"Japan Food Service":"000100084843434A",
+"Mii Channel":"0001000248414341",
 "News":"0001000248414741",
-"Nintendo":"00010001484154**",
-"Opera":"00010001484144**",
-"Photo [ALL]":"0001000248414141",
-"Photo 1.1":"00010002484159**",
-"Region Select":"0001000848414C**",
-"Shashin Channel [JAP]":"000100014843424A",
-"Shop":"00010002484142**",
-"Today & Tomorrow":"00010001484156**",
-"TV Friend / G-Guide [JAP]":"0001000148424E4A",
-"Weather":"00010002484146**",
-"Wii No Ma [JAP]":"000100014843494A",
-"Wii Speak":"00010001484346**"
+"Nintendo":"000100014841544A",
+"Opera":"000100014841444A",
+"Photo":"0001000248414141",
+"Photo 1.1":"000100024841594A",
+"Region Select":"0001000848414C4A",
+"Shashin Channel":"000100014843424A",
+"Shop":"000100024841424A",
+"Today & Tomorrow":"000100014841564A",
+"TV Friend / G-Guide":"0001000148424E4A",
+"Weather":"000100024841464A",
+"Wii No Ma":"000100014843494A",
+"Wii Speak":"000100014843464A"
 }
 
-ChannelRegionDict = {
+ChannelJAPVerDict = {
 "BOOT2":"4",
-"System Menu [JAP]":"128 2.0, 192 2.1, 224 3.0, 256 3.1, 288 3.2,\
+"System Menu":"128 2.0, 192 2.1, 224 3.0, 256 3.1, 288 3.2,\
 \n352 3.3, 384 3.4, 416 4.0, 448 4.1, 480 4.2,\n512 4.3",
-"System Menu [PAL]":"130 2.0, 162 2.1, 194 2.2, 226 3.0, 257 3.1,\
-\n290 3.2, 354 3.3, 386 3.4, 418 4.0, 450 4.1,\n482 4.2, 514 4.3",
-"System Menu [USA]":"97 2.0, 193 2.2, 225 3.0, 257 3.1, 289 3.2,\
-\n353 3.3, 385 3.4, 417 4.0, 449 4.1, 481 4.2,\n513 4.3",
-"System Menu [KOR]":"390 3.5, 454 4.1, 486 4.2, 518 4.3",
 "BC":"2, 4, 5, 6",
 "MIOS":"4, 5, 8, 9, 10",
-"BBC iPlayer [PAL]":"latest (PAL only)",
-"Check Mii Out":"1, 3, 512,\n** = 45 (USA), 4A (JAP), 50 (PAL)",
-"Digicam Print [JAP]":"latest (JAP only)",
-"EULA":"1, 2, 3,\n** = 45 (USA), 4A (JAP), 4B (KOR), 50 (PAL)",
-"Everyone Votes":"latest\n** = 45 (USA), 4A (JAP), 50 (PAL)",
-"Japan Food Service [JAP]":"latest (JAP only)",
-"Jam With The Band":"latest\n** = 4A (JAP), 50 (PAL)",
-"Mii Channel [ALL]":"2, 3, 4, 5, 6",
-"News":"3, 6, 7,\n** = 41 (ALL), 45 (USA), 4A (JAP), 50 (PAL)",
-"Nintendo":"latest\n** = 45 (USA), 4A (JAP), 50 (PAL)",
-"Opera":"1, 3, 257, 512, 1024\n** = 45 (USA), 4A (JAP), 50 (PAL)",
-"Photo [ALL]":"1, 2",
-"Photo 1.1":"1, 2, 3,\n** = 41 (ALL), 4B (KOR)",
-"Region Select":"1, 2,\n** = 45 (USA), 4A (JAP), 4B (KOR), 50 (PAL)",
-"Shashin Channel [JAP]":"latest (JAP only)",
-"Shop":"3, 4, 5, 6, 7, 8, 10, 13, 14 (KOR only), 16,\n17, 18, 19, 20, ** = 41 (ALL), 4B (KOR)",
-"Today & Tomorrow":"latest, ** = 4A (JAP), 50 (PAL)",
-"TV Friend / G-Guide [JAP]":"latest (JAP only)",
-"Weather":"3, 6, 7\n** = 41 (ALL), 45 (USA), 4A (JAP), 50 (PAL)",
-"Wii No Ma [JAP]":"latest (JAP only)",
-"Wii Speak":"1, 256, 512,\n** = 45 (USA), 4A (JAP), 50 (PAL)"
+"Check Mii Out":"1, 3, 512",
+"Digicam Print":"latest",
+"EULA":"1, 2, 3,",
+"Everyone Votes":"latest",
+"Japan Food Service":"latest",
+"Jam With The Band":"latest",
+"Mii Channel":"2, 3, 4, 5, 6",
+"News":"3, 6, 7,",
+"Nintendo":"latest",
+"Opera":"1, 3, 257, 512, 1024",
+"Photo":"1, 2",
+"Photo 1.1":"1, 2, 3,",
+"Region Select":"1, 2,",
+"Shashin Channel":"latest",
+"Shop":"3, 4, 5, 6, 7, 8, 10, 13, 16,\n17, 18, 19, 20,",
+"Today & Tomorrow":"latest",
+"TV Friend / G-Guide":"latest",
+"Weather":"3, 6, 7",
+"Wii No Ma":"latest",
+"Wii Speak":"1, 256, 512"
+}
+
+ChannelPALDict = {
+"BOOT2":"0000000100000001",
+"System Menu":"0000000100000002",
+"BC":"0000000100000100",
+"MIOS":"0000000100000101",
+"BBC iPlayer":"0001000148434A50",
+"Check Mii Out":"0001000148415050",
+"EULA":"0001000848414B50",
+"Everyone Votes":"0001000148414A50",
+"Jam With The Band":"0001000148434150",
+"Mii Channel":"0001000248414341",
+"News":"0001000248414741",
+"Nintendo":"0001000148415450",
+"Opera":"0001000148414450",
+"Photo":"0001000248414141",
+"Photo 1.1":"0001000248415950",
+"Region Select":"0001000848414C50",
+"Shop":"0001000248414250",
+"Today & Tomorrow":"0001000148415650",
+"Weather":"0001000248414650",
+"Wii Speak":"0001000148434650"
+}
+
+ChannelPALVerDict = {
+"BOOT2":"4",
+"System Menu":"130 2.0, 162 2.1, 194 2.2, 226 3.0, 257 3.1,\
+\n290 3.2, 354 3.3, 386 3.4, 418 4.0, 450 4.1,\n482 4.2, 514 4.3",
+"BC":"2, 4, 5, 6",
+"MIOS":"4, 5, 8, 9, 10",
+"BBC iPlayer":"latest",
+"Check Mii Out":"1, 3, 512,",
+"EULA":"1, 2, 3,",
+"Everyone Votes":"latest",
+"Jam With The Band":"latest",
+"Mii Channel":"2, 3, 4, 5, 6",
+"News":"3, 6, 7,",
+"Nintendo":"latest",
+"Opera":"1, 3, 257, 512, 1024",
+"Photo":"1, 2",
+"Photo 1.1":"1, 2, 3,",
+"Region Select":"1, 2,",
+"Shop":"3, 4, 5, 6, 7, 8, 10, 13, 16,\n17, 18, 19, 20",
+"Today & Tomorrow":"latest",
+"Weather":"3, 6, 7",
+"Wii Speak":"1, 256, 512"
+}
+
+ChannelUSADict = {
+"BOOT2":"0000000100000001",
+"System Menu":"0000000100000002",
+"BC":"0000000100000100",
+"MIOS":"0000000100000101",
+"Check Mii Out":"0001000148415045",
+"EULA":"0001000848414B45",
+"Everyone Votes":"0001000148414A45",
+"Jam With The Band":"0001000148434145",
+"Mii Channel":"0001000248414341",
+"News":"0001000248414741",
+"Nintendo":"0001000148415445",
+"Opera":"0001000148414445",
+"Photo":"0001000248414141",
+"Photo 1.1":"0001000248415945",
+"Region Select":"0001000848414C45",
+"Shop":"0001000248414245",
+"Today & Tomorrow":"0001000148415645",
+"Weather":"0001000248414645",
+"Wii Speak":"0001000148434650"
+}
+
+ChannelUSAVerDict = {
+"BOOT2":"4",
+"System Menu":"97 2.0, 193 2.2, 225 3.0, 257 3.1, 289 3.2,\
+\n353 3.3, 385 3.4, 417 4.0, 449 4.1, 481 4.2,\n513 4.3",
+"BC":"2, 4, 5, 6",
+"MIOS":"4, 5, 8, 9, 10",
+"Check Mii Out":"1, 3, 512,",
+"EULA":"1, 2, 3,",
+"Everyone Votes":"latest",
+"Jam With The Band":"latest",
+"Mii Channel":"2, 3, 4, 5, 6",
+"News":"3, 6, 7,",
+"Nintendo":"latest",
+"Opera":"1, 3, 257, 512, 1024",
+"Photo":"1, 2",
+"Photo 1.1":"1, 2, 3,",
+"Region Select":"1, 2,",
+"Shop":"3, 4, 5, 6, 7, 8, 10, 13, 16,\n17, 18, 19, 20",
+"Today & Tomorrow":"latest",
+"Weather":"3, 6, 7",
+"Wii Speak":"1, 256, 512"
 }
 
 IOSdict = {

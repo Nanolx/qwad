@@ -30,9 +30,10 @@ class MWQwad(QMainWindow, Ui_Qwad):
         self.VersionlineEdit.setText(self.defaultversion)
         for key in TitleIDs.sorted_copy(TitleIDs.TitleDict):
             self.comboBox.addItem(key)
-        for key in TitleIDs.sorted_copy(TitleIDs.ChannelDict):
-            self.comboBox2.addItem(key)
+        for key in TitleIDs.SupportedRegions:
+            self.ChooseRegion.addItem(key)
         self.getReady()
+        self.default_region = ""
 
     def Status(self,status):
         print status
@@ -210,7 +211,10 @@ class MWQwad(QMainWindow, Ui_Qwad):
         """
         Show the title ID of the selected title
         """
-        if self.comboBox.findText(selection) != 0:
+        if self.comboBox.findText(selection) == 0:
+            self.enteredTitleID.setText("")
+            self.availableVersions.setText("")
+        elif self.comboBox.findText(selection) > 0:
             self.enteredTitleID.enabled = False
             self.enteredTitleID.setText(TitleIDs.TitleDict[str(selection)])
             self.availableVersions.setText(TitleIDs.IOSdict[str(selection)])
@@ -220,10 +224,42 @@ class MWQwad(QMainWindow, Ui_Qwad):
         """
         Show the title ID of the selected title
         """
-        if self.comboBox2.findText(selection) != 0:
+        print self.comboBox2.findText(selection)
+        if self.comboBox2.findText(selection) == 0:
+            self.enteredTitleID.setText("")
+            self.availableVersions.setText("")
+        elif self.comboBox2.findText(selection) > 0:
             self.enteredTitleID.enabled = False
-            self.enteredTitleID.setText(TitleIDs.ChannelDict[str(selection)])
-            self.availableVersions.setText(TitleIDs.ChannelRegionDict[str(selection)])
+            if self.default_region == "JAP":
+                self.enteredTitleID.setText(TitleIDs.ChannelJAPDict[str(selection)])
+                self.availableVersions.setText(TitleIDs.ChannelJAPVerDict[str(selection)])
+            elif self.default_region == "PAL":
+                self.enteredTitleID.setText(TitleIDs.ChannelPALDict[str(selection)])
+                self.availableVersions.setText(TitleIDs.ChannelPALVerDict[str(selection)])
+            elif self.default_region == "USA":
+                self.enteredTitleID.setText(TitleIDs.ChannelUSADict[str(selection)])
+                self.availableVersions.setText(TitleIDs.ChannelUSAVerDict[str(selection)])
+
+    @pyqtSignature("QString")
+    def on_ChooseRegion_currentIndexChanged(self, selection):
+        self.default_region = "JAP"
+        if self.default_region != "":
+            count = self.comboBox2.count()
+            while count > -1 :
+                self.comboBox2.removeItem(count)
+                count = count - 1
+        if self.ChooseRegion.findText(selection) != 0:
+            self.default_region = str(selection)
+            self.comboBox2.addItem("Choose Channel")
+            if self.default_region == "JAP":
+                for key in TitleIDs.sorted_copy(TitleIDs.ChannelJAPDict):
+                    self.comboBox2.addItem(key)
+            elif self.default_region == "PAL":
+                for key in TitleIDs.sorted_copy(TitleIDs.ChannelPALDict):
+                    self.comboBox2.addItem(key)
+            elif self.default_region == "USA":
+                for key in TitleIDs.sorted_copy(TitleIDs.ChannelUSADict):
+                    self.comboBox2.addItem(key)
 
     @pyqtSignature("")
     def on_enteredTitleID_returnPressed(self):
