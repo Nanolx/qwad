@@ -4,4 +4,4 @@ Python 2.5 or higher
 PyQt4
 (Windows installer: http://www.riverbankcomputing.com/software/pyqt/download )
 PyCrypto
-(Windows installer: http://www.voidspace.org.uk/python/modules.shtml#pycrypto )
+(Windows installer: http://dragffy.com/blog/posts/ython-pycrypto-2-4-1-32-and-64-bit-windows-32x64-amdintel-installers )
