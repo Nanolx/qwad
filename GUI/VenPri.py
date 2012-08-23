@@ -224,7 +224,6 @@ class MWQwad(QMainWindow, Ui_Qwad):
         """
         Show the title ID of the selected title
         """
-        print self.comboBox2.findText(selection)
         if self.comboBox2.findText(selection) == 0:
             self.enteredTitleID.setText("")
             self.availableVersions.setText("")
