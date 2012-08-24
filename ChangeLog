@@ -1,3 +1,7 @@
+-- 0.5 --
+* add debian packaging scripts
+* install translations
+
 -- 0.4 --
 * add new IOS to downloader
 * show available versions of selected IOS in downloader
