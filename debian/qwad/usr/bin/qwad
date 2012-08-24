@@ -1,3 +1,0 @@
-#!/bin/sh
-cd /usr/share/Qwad
-python2 Qwad.pyw $@
