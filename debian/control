@@ -1,0 +1,13 @@
+Source: qwad
+Section: utils
+Priority: extra
+Maintainer: Christopher Roy Bratusek <nano@tuxfamily.org
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.9.1
+
+Package: qwad
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
+Description: QWad - Qt WAD Creator
+ QWad is a NUS (Nintendo Update Server) Downloader
+ and WAD packer, written in PythonQt
