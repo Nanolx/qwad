@@ -16,7 +16,7 @@ class Ui_Qwad(object):
         Qwad.setMinimumSize(QtCore.QSize(481, 296))
         Qwad.setMaximumSize(QtCore.QSize(481, 296))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/icons/wad.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("icons/wad.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Qwad.setWindowIcon(icon)
         self.centralWidget = QtGui.QWidget(Qwad)
         self.centralWidget.setObjectName("centralWidget")
