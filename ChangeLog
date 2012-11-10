@@ -4,6 +4,7 @@
 * remove some unused WiiPy stuff, Qwad now runs fine on Python3
 * added IOS62 and Shop v21
 * fixed a bug in Makefile, improved clean rule
+* added german translation (99%)
 
 -- 0.4 --
 * add new IOS to downloader
