@@ -1,7 +1,9 @@
 all:
 
 clean:
-	rm -fv **/*.pyc
+	rm -rf GUI/__pycache__/
+	rm -f *.pyc
+	rm -f **/*.pyc
 
 install:
 	mkdir -p $(DESTDIR)/usr/share/Qwad/i18n
