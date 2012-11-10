@@ -88,6 +88,7 @@ TitleDict = {
 "IOS58":"000000010000003a",
 "IOS60":"000000010000003c",
 "IOS61":"000000010000003d",
+"IOS62":"000000010000003e",
 "IOS70":"0000000100000046",
 "IOS80":"0000000100000050", }
 
@@ -140,7 +141,7 @@ ChannelJAPVerDict = {
 "Photo 1.1":"1, 2, 3,",
 "Region Select":"1, 2,",
 "Shashin Channel":"latest",
-"Shop":"3, 4, 5, 6, 7, 8, 10, 13, 16,\n17, 18, 19, 20,",
+"Shop":"3, 4, 5, 6, 7, 8, 10, 13, 16,\n17, 18, 19, 20, 21",
 "Today & Tomorrow":"latest",
 "TV Friend / G-Guide":"latest",
 "Weather":"3, 6, 7",
@@ -189,7 +190,7 @@ ChannelPALVerDict = {
 "Photo":"1, 2",
 "Photo 1.1":"1, 2, 3,",
 "Region Select":"1, 2,",
-"Shop":"3, 4, 5, 6, 7, 8, 10, 13, 16,\n17, 18, 19, 20",
+"Shop":"3, 4, 5, 6, 7, 8, 10, 13, 16,\n17, 18, 19, 20, 21",
 "Today & Tomorrow":"latest",
 "Weather":"3, 6, 7",
 "Wii Speak":"1, 256, 512"
@@ -234,7 +235,7 @@ ChannelUSAVerDict = {
 "Photo":"1, 2",
 "Photo 1.1":"1, 2, 3,",
 "Region Select":"1, 2,",
-"Shop":"3, 4, 5, 6, 7, 8, 10, 13, 16,\n17, 18, 19, 20",
+"Shop":"3, 4, 5, 6, 7, 8, 10, 13, 16,\n17, 18, 19, 20, 21",
 "Today & Tomorrow":"latest",
 "Weather":"3, 6, 7",
 "Wii Speak":"1, 256, 512"
@@ -279,6 +280,7 @@ IOSdict = {
 "IOS58":"6175, 6176",
 "IOS60":"6174, 6400 (stub)",
 "IOS61":"4890, 5405, 5661, 5662",
+"Ios62":"6430",
 "IOS70":"6687, 6912 (stub)",
 "IOS80":"6943",
 }
