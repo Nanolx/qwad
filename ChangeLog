@@ -5,6 +5,7 @@
 * added IOS62 and Shop v21
 * fixed a bug in Makefile, improved clean rule
 * added german translation (99%)
+* new icon from NeoRame
 
 -- 0.4 --
 * add new IOS to downloader
