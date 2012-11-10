@@ -1,9 +1,4 @@
-TRANSLATIONS = Qwad_ca.ts \
-	       Qwad_de.ts \
-	       Qwad_en.ts \
-	       Qwad_es.ts \
-	       Qwad_fr.ts \
-	       Qwad_it.ts
+TRANSLATIONS = Qwad_de.ts
 
 SOURCES = Qwad.pyw \
 	  GUI/Ui_AboutQwad.py \
