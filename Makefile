@@ -11,7 +11,7 @@ install:
 	mkdir -p $(DESTDIR)/usr/bin
 	install -m755 qwad $(DESTDIR)/usr/bin
 	install -m644 i18n/*.qm $(DESTDIR)/usr/share/Qwad/i18n
-	cp -r GUI WiiPy TitleIDs.py i18n Qwad.pyw Qwad_rc.py Qwad.qrc icons README COPYING AUTHORS $(DESTDIR)/usr/share/Qwad/
+	cp -r GUI WiiPy TitleIDs.py i18n Qwad.pyw Qwad_rc.py icons README COPYING AUTHORS $(DESTDIR)/usr/share/Qwad/
 
 uninstall:
 	rm -f $(DESTDIR)/usr/bin/qwad
