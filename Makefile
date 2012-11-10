@@ -1,4 +1,5 @@
 all:
+	-lrelease i18n/Qwad_de.ts
 
 clean:
 	rm -rf GUI/__pycache__/
@@ -9,7 +10,7 @@ install:
 	mkdir -p $(DESTDIR)/usr/share/Qwad/i18n
 	mkdir -p $(DESTDIR)/usr/bin
 	install -m755 qwad $(DESTDIR)/usr/bin
-	install -m644 i18n/*.ts $(DESTDIR)/usr/share/Qwad/i18n
+	install -m644 i18n/*.qm $(DESTDIR)/usr/share/Qwad/i18n
 	cp -r GUI WiiPy TitleIDs.py i18n Qwad.pyw Qwad_rc.py README COPYING AUTHORS $(DESTDIR)/usr/share/Qwad/
 
 uninstall:
