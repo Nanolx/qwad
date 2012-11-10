@@ -2,7 +2,6 @@ import os, hashlib, struct, subprocess, fnmatch, shutil, urllib, array, time, sy
 from cStringIO import StringIO
 
 from Crypto.Cipher import AES
-from PIL import Image
 
 from Struct import Struct
 
