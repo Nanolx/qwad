@@ -1,6 +1,5 @@
 from common import *
 from title import *
-from image import *
 
 class Savegame():
 	class savegameHeader(Struct):

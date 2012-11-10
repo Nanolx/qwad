@@ -4,7 +4,6 @@ from common import *
 from formats import *
 from title import *
 from disc import *
-from image import *
 from archive import *
 from export import *
 from compression import *
