@@ -26,7 +26,7 @@ TODO:
   - add new IOS [DONE]
   - add new Channels [DONE]
   - display available Versions [DONE]
-  - improve Channel downloader [WIP]
+  - improve Channel downloader [DONE]
   - display descriptions [  ]
 
 * General GUI
@@ -39,6 +39,6 @@ TODO:
 * Other
   - extract bootmii nand.bin [  ]
 
-USING:
+USAGE:
 
-either do 'make install' or directly call 'python2 ./Qwad.pyw'
+either do 'make install' or directly call 'python ./Qwad.pyw'
