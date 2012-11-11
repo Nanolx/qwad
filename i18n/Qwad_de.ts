@@ -176,7 +176,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../GUI/Ui_VenPri.py" line="265"/>
         <source>Output</source>
-        <translation>Verzeichnis</translation>
+        <translation>Ausgabe</translation>
     </message>
     <message>
         <location filename="../GUI/Ui_VenPri.py" line="242"/>

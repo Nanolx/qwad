@@ -1,3 +1,6 @@
+-- 0.6 --
+* fixed a string in german translation
+
 -- 0.5a --
 * correctly show version of IOS62
 * fix downloading shop channel
