@@ -37,6 +37,8 @@ def main():
                       help='IOS <IOS> <Version> <Output> <DeCrypt> <Pack>')
     parser.add_option('-g', "--getversions", dest="getversions",
                       action="store_true", default=False, help="get available versions for IOS")
+    parser.add_option('-c', "--convert", dest="convert",
+		      action="store_true", default=False, help="convert between IOSX and xxxxxxx-xxxxxxx")
     parser.add_option("-v", "--version", dest="version",
 		      action="store_true", default=False, help="print version and exit")
 
@@ -64,6 +66,16 @@ def main():
 		xarg = NewDict[str(args[0])]
 	        print "Available Versions for %s: %s" % (str(args[0]), IOSdict[str(xarg)])
 	    sys.exit(0)
+
+    if options.convert:
+	    if "IOS" in str(args[0]):
+		print "%s == %s" % (str(args[0]), TitleDict[str(args[0])])
+	    else:
+		NewDict = swap_dic(TitleDict)
+		xarg = NewDict[str(args[0])]
+	        print "%s == %s" % (str(args[0]), xarg)
+	    sys.exit(0)
+
 
     os.chdir(os.getenv("HOME"))
     translator = QTranslator()
