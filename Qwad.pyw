@@ -46,12 +46,12 @@ def main():
 	    sys.exit(0)
 
     if options.download:
-	    if "IOS" in str(args[0]):
-		xarg = TitleDict[str(args[0])]
-	   	nusdow = nusDownloadingCLI(int(str(xarg).lower(),16), args[1], args[2], args[3], args[4])
+	    if "IOS" in str(options.download[0]):
+		xarg = TitleDict[str(options.download[0])]
+	   	nusdow = nusDownloadingCLI(int(str(xarg).lower(),16), args[0], args[1], args[2], args[3])
 	    else:
 
-	        nusdow = nusDownloadingCLI(int(str(args[0]).lower(),16), args[1], args[2], args[3], args[4])
+	        nusdow = nusDownloadingCLI(int(str(options.download[0]).lower(),16), args[0], args[1], args[2], args[3])
 	    nusdow.start()
 	    sys.exit(0)
 
@@ -72,7 +72,6 @@ def main():
 		xarg = NewDict[str(args[0])]
 	        print "%s == %s" % (str(args[0]), xarg)
 	    sys.exit(0)
-
 
     os.chdir(os.getenv("HOME"))
     translator = QTranslator()
