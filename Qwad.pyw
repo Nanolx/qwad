@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #coding=utf-8
-import sys
+import sys, os
 from optparse import OptionParser
 from optparse import Option, OptionValueError
 from PyQt4.QtGui import QApplication
