@@ -1,25 +1,64 @@
 #!/usr/bin/env python
 #coding=utf-8
 import sys
-import optparse
+from optparse import OptionParser
+from optparse import Option, OptionValueError
 from PyQt4.QtGui import QApplication
 from PyQt4.QtCore import QTranslator, QString, QLocale
 from GUI.VenPri import MWQwad
+from GUI.VenPri import nusDownloadingCLI
+from TitleIDs import TitleDict
 
-parser = optparse.OptionParser("qwad <option> [value]\
-				\n\nQwad (c) 2012 Christopher Roy Bratusek\
-				\nLicensed under the GNU GENERAL PUBLIC LICENSE v3")
+class MultipleOption(Option):
+    ACTIONS = Option.ACTIONS + ("extend",)
+    STORE_ACTIONS = Option.STORE_ACTIONS + ("extend",)
+    TYPED_ACTIONS = Option.TYPED_ACTIONS + ("extend",)
+    ALWAYS_TYPED_ACTIONS = Option.ALWAYS_TYPED_ACTIONS + ("extend",)
 
-parser.add_option("-v", "--version", dest="version",
-                  action="store_true", default=False, help="print version and exit")
+    def take_action(self, action, dest, opt, value, values, parser):
+        if action == "extend":
+            values.ensure_value(dest, []).append(value)
+        else:
+            Option.take_action(self, action, dest, opt, value, values, parser)
 
-(options, args) = parser.parse_args()
+VERSION = '0.6'
 
-if options.version:
-		print "0.6"
-		sys.exit(0)
+def main():
+    description = """NUS-Downloader, WadManager for Linux"""
+    parser = OptionParser(option_class=MultipleOption,
+                          usage='usage: qwad [OPTIONS] ARGUMENT',
+                          description=description)
+    parser.add_option('-d', '--downloads',
+                      action="extend", type="string",
+                      dest='download',
+                      metavar='Arguments',
+                      help='IOS Version OutPut DeCrypt')
+    parser.add_option("-v", "--version", dest="version",
+		      action="store_true", default=False, help="print version and exit")
 
-if __name__ == "__main__":
+    #if len(sys.argv) == 1:
+    #    parser.parse_args(['--help'])
+
+    options, args = parser.parse_args()
+
+    if options.version:
+	    print "%s" % VERSION
+	    sys.exit(0)
+
+    if options.download:
+	    if "IOS" in str(args[0]):
+		xarg = TitleDict[str(args[0])]
+		print "%s" % xarg
+		print "%d" % int(str(xarg).lower(),16)
+	   	nusdow = nusDownloadingCLI(int(str(xarg).lower(),16), args[1], args[2], args[3], args[4])
+	    else:
+		print "%s" % args[0]
+		print "%d" % int(str(args[0]).lower(),16)
+	        nusdow = nusDownloadingCLI(int(str(args[0]).lower(),16), args[1], args[2], args[3], args[4])
+	    nusdow.start()
+	    sys.exit(0)
+
+    os.chdir(os.getenv("HOME"))
     translator = QTranslator()
     translator.load(QString("i18n/Qwad_%1").arg(QLocale.system().name()))
     qttranslator = QTranslator()
@@ -33,3 +72,5 @@ if __name__ == "__main__":
     VentanaP.show()
     sys.exit(Vapp.exec_())
 
+if __name__ == "__main__":
+    main()

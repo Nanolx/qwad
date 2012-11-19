@@ -327,6 +327,18 @@ class Unpacking(Thread):
             self.qobject.emit(SIGNAL("Exception"),e)
         self.qobject.emit(SIGNAL("Done"))
 
+class UnpackingCLI(Thread):
+    def __init__(self, wadpath, dirpath):
+        Thread.__init__(self)
+        self.wadpath = wadpath
+        self.dirpath = dirpath
+    def run(self):
+        try:
+            WAD.loadFile(self.wadpath).dumpDir(self.dirpath)
+        except Exception, e:
+            print e
+        print "Done"
+
 class Packing(Unpacking):
     def __init__(self, dirpath, wadpath, QMW, deletedir = False):
         Unpacking.__init__(self, wadpath, dirpath, QMW)
@@ -349,6 +361,25 @@ class Packing(Unpacking):
             print e
             self.qobject.emit(SIGNAL("Exception"),e)
         self.qobject.emit(SIGNAL("Done"))
+
+class PackingCLI(UnpackingCLI):
+    def __init__(self, dirpath, wadpath, deletedir = False):
+        UnpackingCLI.__init__(self, wadpath, dirpath)
+        self.deletedir = deletedir
+    def run(self):
+        try:
+            print self.dirpath
+            print self.wadpath
+            WAD.loadDir(self.dirpath).dumpFile(self.wadpath)
+            if self.deletedir:
+                print "Cleaning temporary files"
+                rmtree(self.dirpath)
+        except Exception, e:
+            if self.deletedir:
+                print "Cleaning temporary files"
+                rmtree(self.dirpath)
+            print e
+	print "Done"
 
 class nusDownloading(Unpacking):
     def __init__(self, titleid, version, outputdir, decrypt, QMW):
@@ -375,6 +406,29 @@ class nusDownloading(Unpacking):
             Errormsg = str(e) + ". " +  QT_TR_NOOP(QString("Title %1 version %2 maybe isn't available for download on NUS.").arg(str(self.titleid)).arg(str(self.version)))
             self.qobject.emit(SIGNAL("Exception"),Errormsg)
             self.qobject.emit(SIGNAL("Done"))
+
+class nusDownloadingCLI(UnpackingCLI):
+    def __init__(self, titleid, version, outputdir, decrypt, pack):
+        UnpackingCLI.__init__(self, None, outputdir)
+        if version != None:
+            self.version = int(version)
+        else:
+            self.version = None
+        self.decrypt = decrypt
+        self.titleid = titleid
+	self.pack = pack
+	self.outputdir = outputdir
+    def run(self):
+        try:
+            if self.pack:
+                self.dirpath = tempfile.gettempdir() + "/NUS_"+ str(time.time()).replace(".","")
+                NUS(self.titleid, self.version).download(self.dirpath, decrypt = False)
+                self.packing = PackingCLI(self.dirpath, str(self.outputdir), True)
+                self.packing.start()
+            else:
+                NUS(self.titleid,self.version).download(self.dirpath, decrypt = self.decrypt)
+        except Exception, e:
+            print e
 
 #Statusbar messages
 #FIXME: Why don't they get translated? It's frustrating
