@@ -300,7 +300,7 @@ class MWQwad(QMainWindow, Ui_Qwad):
             None,
             self.trUtf8("Select a TMD file"),
             QString(),
-            self.trUtf8("tmd; TMD"),
+            self.trUtf8("*.tmd; *.TMD"),
             None,
             QFileDialog.Options(QFileDialog.DontResolveSymlinks))
         if tmdpath != "":
