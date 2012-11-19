@@ -5,8 +5,7 @@ from optparse import OptionParser
 from optparse import Option, OptionValueError
 from PyQt4.QtGui import QApplication
 from PyQt4.QtCore import QTranslator, QString, QLocale
-from GUI.VenPri import MWQwad
-from GUI.VenPri import nusDownloadingCLI
+from GUI.VenPri import MWQwad, nusDownloadingCLI
 from TitleIDs import TitleDict, IOSdict, swap_dic
 
 class MultipleOption(Option):
