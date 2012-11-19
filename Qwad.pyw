@@ -24,7 +24,7 @@ class MultipleOption(Option):
 VERSION = '0.6'
 
 def main():
-    description = """NUS-Downloader, WadManager for Linux"""
+    description = """NUS-Downloader, WadManager and TMD-Viewer for Linux"""
     parser = OptionParser(option_class=MultipleOption,
                           usage='usage: qwad [OPTIONS] ARGUMENT',
                           description=description)
@@ -32,12 +32,9 @@ def main():
                       action="extend", type="string",
                       dest='download',
                       metavar='Arguments',
-                      help='IOS Version OutPut DeCrypt')
+                      help='IOS <IOS> <Version> <Output> <DeCrypt> <Pack>')
     parser.add_option("-v", "--version", dest="version",
 		      action="store_true", default=False, help="print version and exit")
-
-    #if len(sys.argv) == 1:
-    #    parser.parse_args(['--help'])
 
     options, args = parser.parse_args()
 
