@@ -1,5 +1,32 @@
 -- 0.6 --
 * fixed a string in german translation
+* fixed selecting file in TMD-Viewer
+* add command line options:
+  -h / --help 		= show help
+  -v / --version	= show Qwad version and exit
+  -d / --download	= download IOS (see examples below)
+  -g / --getversions	= get available versions of given IOS
+  -c / --convert	= convert IOS name to hex (and vice versa)
+  ======================================================================
+  Examples (no batch-support):
+
+  **Download**
+  qwad -d <IOS>            <VERSION> <OUTPUT>       <DECRYPT> <PACK>
+  qwad -d IOS58            6176      $PWD/IOS58.wad False     True
+  qwad -d 000000010000003a 6176      $PWD/IOS58.wad True      False
+  >> Result: IOS58.wad
+
+  **GetVersions**
+  qwad -g <IOS>
+  qwad -g IOS9
+  qwad -g 0000000100000009
+  >> Result: Available Versions for IOS9: 520, 521, 778, 1034
+
+  **Convert**
+  qwad -c <IOS>
+  qwad -c IOS36
+  qwad -c 0000000100000024
+  >> Result: IOS36 == 0000000100000024
 
 -- 0.5a --
 * correctly show version of IOS62
