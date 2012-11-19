@@ -7,9 +7,7 @@ from PyQt4.QtGui import QApplication
 from PyQt4.QtCore import QTranslator, QString, QLocale
 from GUI.VenPri import MWQwad
 from GUI.VenPri import nusDownloadingCLI
-from TitleIDs import TitleDict
-from TitleIDs import IOSdict
-from TitleIDs import swap_dic
+from TitleIDs import TitleDict, IOSdict, swap_dic
 
 class MultipleOption(Option):
     ACTIONS = Option.ACTIONS + ("extend",)
