@@ -8,6 +8,8 @@ from PyQt4.QtCore import QTranslator, QString, QLocale
 from GUI.VenPri import MWQwad
 from GUI.VenPri import nusDownloadingCLI
 from TitleIDs import TitleDict
+from TitleIDs import IOSdict
+from TitleIDs import swap_dic
 
 class MultipleOption(Option):
     ACTIONS = Option.ACTIONS + ("extend",)
@@ -28,11 +30,13 @@ def main():
     parser = OptionParser(option_class=MultipleOption,
                           usage='usage: qwad [OPTIONS] ARGUMENT',
                           description=description)
-    parser.add_option('-d', '--downloads',
+    parser.add_option('-d', '--download',
                       action="extend", type="string",
                       dest='download',
                       metavar='Arguments',
                       help='IOS <IOS> <Version> <Output> <DeCrypt> <Pack>')
+    parser.add_option('-g', "--getversions", dest="getversions",
+                      action="store_true", default=False, help="get available versions for IOS")
     parser.add_option("-v", "--version", dest="version",
 		      action="store_true", default=False, help="print version and exit")
 
@@ -45,14 +49,20 @@ def main():
     if options.download:
 	    if "IOS" in str(args[0]):
 		xarg = TitleDict[str(args[0])]
-		print "%s" % xarg
-		print "%d" % int(str(xarg).lower(),16)
 	   	nusdow = nusDownloadingCLI(int(str(xarg).lower(),16), args[1], args[2], args[3], args[4])
 	    else:
-		print "%s" % args[0]
-		print "%d" % int(str(args[0]).lower(),16)
+
 	        nusdow = nusDownloadingCLI(int(str(args[0]).lower(),16), args[1], args[2], args[3], args[4])
 	    nusdow.start()
+	    sys.exit(0)
+
+    if options.getversions:
+	    if "IOS" in str(args[0]):
+		print "Available Versions for %s: %s" % (str(args[0]), IOSdict[str(args[0])])
+	    else:
+		NewDict = swap_dic(TitleDict)
+		xarg = NewDict[str(args[0])]
+	        print "Available Versions for %s: %s" % (str(args[0]), IOSdict[str(xarg)])
 	    sys.exit(0)
 
     os.chdir(os.getenv("HOME"))
