@@ -1,6 +1,9 @@
 -- 0.6 --
 * fixed a string in german translation
 * fixed selecting file in TMD-Viewer
+* only install qm-files for translation, not ts-files aswell
+* changed default directory to $HOME (so that file-selectors
+  don't start at Qwads source or installation directory)
 * add command line options:
   -h / --help 		= show help
   -v / --version	= show Qwad version and exit
