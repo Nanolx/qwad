@@ -22,7 +22,7 @@ class MultipleOption(Option):
 
 VERSION = '0.6'
 
-def main():
+def opts():
     description = """NUS-Downloader, WadManager and TMD-Viewer for Linux"""
     parser = OptionParser(option_class=MultipleOption,
                           usage='usage: qwad [OPTIONS] ARGUMENT',
@@ -73,13 +73,18 @@ def main():
 	        print "%s == %s" % (str(args[0]), xarg)
 	    sys.exit(0)
 
-    os.chdir(os.getenv("HOME"))
+def main():
+    # load our own translations
     translator = QTranslator()
     translator.load(QString("i18n/Qwad_%1").arg(QLocale.system().name()))
+    # load Qt translations
     qttranslator = QTranslator()
     qttranslator.load(QString("qt_%1").arg(QLocale.system().name()))
+    # change directory in $HOME, so that file-seletors don't start in Qwads source/data directory
+    os.chdir(os.getenv("HOME"))
+    # misc stuff
     Vapp = QApplication(sys.argv)
-    Vapp.setOrganizationName("ssorgatem productions")
+    Vapp.setOrganizationName("Nanolx")
     Vapp.setApplicationName("Qwad")
     Vapp.installTranslator(translator)
     Vapp.installTranslator(qttranslator)
@@ -88,4 +93,5 @@ def main():
     sys.exit(Vapp.exec_())
 
 if __name__ == "__main__":
+    opts()
     main()
