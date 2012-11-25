@@ -50,6 +50,8 @@ def swap_dic(original_dict):
 SupportedRegions = [ "JAP", "USA", "PAL" ]
 
 TitleDict = {
+"BC":"0000000100000100",
+"MIOS":"0000000100000101",
 "IOS4":"0000000100000004",
 "IOS9":"0000000100000009",
 "IOS10":"000000010000000a",
@@ -97,8 +99,6 @@ TitleSwapDict = swap_dic(TitleDict)
 ChannelJAPDict = {
 "BOOT2":"0000000100000001",
 "System Menu":"0000000100000002",
-"BC":"0000000100000100",
-"MIOS":"0000000100000101",
 "Check Mii Out":"000100014841504A",
 "Digicam Print":"000100014843444A",
 "EULA":"0001000848414B4A",
@@ -125,8 +125,6 @@ ChannelJAPVerDict = {
 "BOOT2":"4",
 "System Menu":"128 2.0, 192 2.1, 224 3.0, 256 3.1, 288 3.2,\
 \n352 3.3, 384 3.4, 416 4.0, 448 4.1, 480 4.2,\n512 4.3",
-"BC":"2, 4, 5, 6",
-"MIOS":"4, 5, 8, 9, 10",
 "Check Mii Out":"1, 3, 512",
 "Digicam Print":"latest",
 "EULA":"1, 2, 3",
@@ -152,8 +150,6 @@ ChannelJAPVerDict = {
 ChannelPALDict = {
 "BOOT2":"0000000100000001",
 "System Menu":"0000000100000002",
-"BC":"0000000100000100",
-"MIOS":"0000000100000101",
 "BBC iPlayer":"0001000148434A50",
 "Check Mii Out":"0001000148415050",
 "EULA":"0001000848414B50",
@@ -176,8 +172,6 @@ ChannelPALVerDict = {
 "BOOT2":"4",
 "System Menu":"130 2.0, 162 2.1, 194 2.2, 226 3.0, 257 3.1,\
 \n290 3.2, 354 3.3, 386 3.4, 418 4.0, 450 4.1,\n482 4.2, 514 4.3",
-"BC":"2, 4, 5, 6",
-"MIOS":"4, 5, 8, 9, 10",
 "BBC iPlayer":"latest",
 "Check Mii Out":"1, 3, 512",
 "EULA":"1, 2, 3",
@@ -199,8 +193,6 @@ ChannelPALVerDict = {
 ChannelUSADict = {
 "BOOT2":"0000000100000001",
 "System Menu":"0000000100000002",
-"BC":"0000000100000100",
-"MIOS":"0000000100000101",
 "Check Mii Out":"0001000148415045",
 "EULA":"0001000848414B45",
 "Everyone Votes":"0001000148414A45",
@@ -222,8 +214,6 @@ ChannelUSAVerDict = {
 "BOOT2":"4",
 "System Menu":"97 2.0, 193 2.2, 225 3.0, 257 3.1, 289 3.2,\
 \n353 3.3, 385 3.4, 417 4.0, 449 4.1, 481 4.2,\n513 4.3",
-"BC":"2, 4, 5, 6",
-"MIOS":"4, 5, 8, 9, 10",
 "Check Mii Out":"1, 3, 512",
 "EULA":"1, 2, 3",
 "Everyone Votes":"latest",
@@ -242,6 +232,8 @@ ChannelUSAVerDict = {
 }
 
 IOSdict = {
+"BC":"2, 4, 5, 6",
+"MIOS":"4, 5, 8, 9, 10",
 "IOS4":"65280 (stub)",
 "IOS9":"520, 521, 778, 1034",
 "IOS10":"768 (stub)",
