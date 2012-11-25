@@ -35,7 +35,8 @@ def opts():
                       help="IOS Version Output Decrypt Pack")
     parser.add_option('-u', "--unpack", dest="unpack", action="extend",
                       type="string", metavar='Arguments', help="unpack a WAD")
-
+    parser.add_option('-p', "--pack", dest="pack", action="extend",
+                      type="string", metavar='Arguments', help="pack folder as WAD")
     parser.add_option('-g', "--getversions", dest="getversions",
                       action="store_true", default=False, help="get available versions for IOS")
     parser.add_option('-c', "--convert", dest="convert",
@@ -88,12 +89,24 @@ def opts():
 	    else:
 		os.mkdir(str(args[0]), 0755)
 	    if os.access(str(args[0]), os.W_OK):
-		folder = str(args[0])
-		UnpackingCLI(wad, folder).start()
+		UnpackingCLI(wad, str(args[0])).start()
 	        sys.exit(0)
 	    else:
 		print "Output folder %s not writeable." % str(args[0])
   		sys.exit(1)
+
+    if options.pack:
+	    if os.access(str(options.pack[0]), os.R_OK):
+		folder = str(options.pack[0])
+	    else:
+		print "Input folder %s not readable." % str(options.pack[0])
+  		sys.exit(1)
+	    if os.access(os.path.dirname(str(args[0])), os.W_OK):
+	    	PackingCLI(folder, str(args[0])).start()
+	        sys.exit(0)
+	    else:
+		print "Output file %s can't be created." % str(args[0])
+		sys.exit(1)
 
 def main():
     # load our own translations

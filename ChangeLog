@@ -4,11 +4,12 @@
 * only install qm-files for translation, not ts-files aswell
 * changed default directory to $HOME (so that file-selectors
   don't start at Qwads source or installation directory)
-* add command line options:
+* add command line options (NOTE: all paths must be absolute!):
   -h / --help 		= show help
   -v / --version	= show Qwad version and exit
   -d / --download	= download IOS (see examples below)
   -u / --unpack		= unpack a wad file
+  -p / --pack		= pack a folder as wad
   -g / --getversions	= get available versions of given IOS
   -c / --convert	= convert IOS name to hex (and vice versa)
   ======================================================================
@@ -21,9 +22,14 @@
   >> Result: IOS58.wad
 
   **Unpack**
-  qwad -u <WAD>		<FOLDER>
-  qwad -u IOS58.wad	IOS58-Unpacked
+  qwad -u <WAD>			<FOLDER>
+  qwad -u $PWD/IOS58.wad	$PWD/IOS58-Unpacked
   >> Result: IOS58-Unpacked/
+
+  **Pack**
+  qwad -p <FOLDER>		<WAD>
+  qwad -p $PWD/IOS58-Unpacked/	$PWD/IOS58.wad
+  >> Result: IOS58.wad
 
   **GetVersions**
   qwad -g <IOS>
