@@ -446,7 +446,7 @@ def ShowTMD(tmdpath):
 	print "Title Version      : %s" % tmd.tmd.title_version
 	print "Title Boot Index   : %s" % tmd.tmd.boot_index
 	print "Title Contents     : %s" % tmd.tmd.numcontents
-	print "Title IOS          : %s" % tmd.tmd.iosversion
+	print "Title IOS          : %s" % TitleIDs.TitleSwapDict["%s" % ("%016x" % tmd.tmd.iosversion)]
 	print "Title Access Rights: %s" % tmd.tmd.access_rights
 	print "Title Type         : %s" % tmd.tmd.title_type
 	print "Title Group ID     : %s" % tmd.tmd.group_id
