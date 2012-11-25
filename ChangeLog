@@ -1,6 +1,7 @@
 -- 0.6 --
 * fixed a string in german translation
 * fixed selecting file in TMD-Viewer
+* fixed show ascii id of title in TMD-Viewer
 * only install qm-files for translation, not ts-files aswell
 * changed default directory to $HOME (so that file-selectors
   don't start at Qwads source or installation directory)
@@ -42,6 +43,21 @@
   qwad -c IOS36
   qwad -c 0000000100000024
   >> Result: IOS36 == 0000000100000024
+
+  **TMD-Info**
+  qwad -t <TMDFILE>
+  qwad -t $PWD/0001000154484246.tmd
+  >> Result:
+  Title ID (HEX)     : 0001000154484246
+  Title ID (ASCII)   : THBF
+  Title Version      : 41
+  Title Boot Index   : 2
+  Title Contents     : 3
+  Title IOS          : 4294967354
+  Title Access Rights: 3
+  Title Type         : 1
+  Title Group ID     : 21065
+  Title Reserved     : _
 
 -- 0.5a --
 * correctly show version of IOS62

@@ -61,7 +61,10 @@ class MWQwad(QMainWindow, Ui_Qwad):
         """
         tmd = TMD().loadFile(tmdpath)
         self.TitleID.setText("%016x" % tmd.tmd.titleid)
-        self.idASCII.setText("%s" % binascii.unhexlify(str(tmd.tmd.titleid)[7:]))
+        tid = "%016x" % tmd.tmd.titleid
+        tid = tid[8:]
+        asc = ''.join([chr(int(''.join(c), 16)) for c in zip(tid[0::2],tid[1::2])])
+        self.idASCII.setText("%s" % asc)
         self.IOSversion.setText(TitleIDs.TitleSwapDict["%s" % ("%016x" % tmd.tmd.iosversion)])
         self.TitleType.setText(str(tmd.tmd.title_type))
         self.GroupID.setText(str(tmd.tmd.group_id))
@@ -429,6 +432,25 @@ class nusDownloadingCLI(UnpackingCLI):
                 NUS(self.titleid,self.version).download(self.dirpath, decrypt = self.decrypt)
         except Exception, e:
             print e
+
+def ShowTMD(tmdpath):
+	"""
+	Displays _TMD information in the CLI
+	"""
+	tmd = TMD().loadFile(tmdpath)
+	print "Title ID (HEX)     : %016x" % tmd.tmd.titleid
+	tid = "%016x" % tmd.tmd.titleid
+	tid = tid[8:]
+	asc = ''.join([chr(int(''.join(c), 16)) for c in zip(tid[0::2],tid[1::2])])
+	print "Title ID (ASCII)   : %s" % asc
+	print "Title Version      : %s" % tmd.tmd.title_version
+	print "Title Boot Index   : %s" % tmd.tmd.boot_index
+	print "Title Contents     : %s" % tmd.tmd.numcontents
+	print "Title IOS          : %s" % tmd.tmd.iosversion
+	print "Title Access Rights: %s" % tmd.tmd.access_rights
+	print "Title Type         : %s" % tmd.tmd.title_type
+	print "Title Group ID     : %s" % tmd.tmd.group_id
+	print "Title Reserved     : %s" % ''.join(str(tmd.tmd.reserved))
 
 #Statusbar messages
 #FIXME: Why don't they get translated? It's frustrating

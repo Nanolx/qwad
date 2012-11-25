@@ -5,7 +5,7 @@ from optparse import OptionParser
 from optparse import Option, OptionValueError
 from PyQt4.QtGui import QApplication
 from PyQt4.QtCore import QTranslator, QString, QLocale
-from GUI.VenPri import MWQwad, nusDownloadingCLI, PackingCLI, UnpackingCLI
+from GUI.VenPri import MWQwad, nusDownloadingCLI, PackingCLI, UnpackingCLI, ShowTMD
 from TitleIDs import TitleDict, IOSdict, swap_dic
 
 class MultipleOption(Option):
@@ -40,7 +40,9 @@ def opts():
     parser.add_option('-g', "--getversions", dest="getversions",
                       action="store_true", default=False, help="get available versions for IOS")
     parser.add_option('-c', "--convert", dest="convert",
-		      action="store_true", default=False, help="convert between IOSxx and hex-value")
+		              action="store_true", default=False, help="convert between IOSxx and hex-value")
+    parser.add_option('-t',  "--tmdinfo", default=False, dest="tmdinfo", action="store_true",
+					  help="Show infos provided by TMD file")
     parser.add_option("-v", "--version", dest="version",
 		      action="store_true", default=False, help="print version and exit")
 
@@ -107,6 +109,14 @@ def opts():
 	    else:
 		print "Output file %s can't be created." % str(args[0])
 		sys.exit(1)
+
+    if options.tmdinfo:
+        if os.access(str(args[0]), os.R_OK):
+            ShowTMD(str(args[0]))
+            sys.exit(0)
+        else:
+            print "Can't access %s." % str(args[0])
+            sys.exit(1)
 
 def main():
     # load our own translations

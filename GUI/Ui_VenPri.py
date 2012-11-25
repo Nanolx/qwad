@@ -66,7 +66,7 @@ class Ui_Qwad(object):
         self.label_9 = QtGui.QLabel(self.widget)
         self.label_9.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_9.setObjectName("label_9")
-        self.gridLayout.addWidget(self.label_9, 0, 2, 1, 2)
+        self.gridLayout.addWidget(self.label_9, 0, 3, 1, 1)
         self.idASCII = QtGui.QLabel(self.widget)
         self.idASCII.setObjectName("idASCII")
         self.gridLayout.addWidget(self.idASCII, 0, 4, 1, 1)
