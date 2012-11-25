@@ -1,5 +1,10 @@
 Channel names for CLI downloader:
 
+append .pal for PAL version (eg: mii.pal)
+append .jap for JAP version (eg: eula.usa)
+append .usa for USA version (eg: news.jap)
+(for region-free channels use any suffix)
+
 boot => BOOT2,
 bbciplayer => BBC iPlayer,
 systemmenu => System Menu,
