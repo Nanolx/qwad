@@ -8,6 +8,7 @@
   -h / --help 		= show help
   -v / --version	= show Qwad version and exit
   -d / --download	= download IOS (see examples below)
+  -u / --unpack		= unpack a wad file
   -g / --getversions	= get available versions of given IOS
   -c / --convert	= convert IOS name to hex (and vice versa)
   ======================================================================
@@ -18,6 +19,11 @@
   qwad -d IOS58            6176      $PWD/IOS58.wad False     True
   qwad -d 000000010000003a 6176      $PWD/IOS58.wad True      False
   >> Result: IOS58.wad
+
+  **Unpack**
+  qwad -u <WAD>		<FOLDER>
+  qwad -u IOS58.wad	IOS58-Unpacked
+  >> Result: IOS58-Unpacked/
 
   **GetVersions**
   qwad -g <IOS>

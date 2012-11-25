@@ -5,7 +5,7 @@ from optparse import OptionParser
 from optparse import Option, OptionValueError
 from PyQt4.QtGui import QApplication
 from PyQt4.QtCore import QTranslator, QString, QLocale
-from GUI.VenPri import MWQwad, nusDownloadingCLI
+from GUI.VenPri import MWQwad, nusDownloadingCLI, PackingCLI, UnpackingCLI
 from TitleIDs import TitleDict, IOSdict, swap_dic
 
 class MultipleOption(Option):
@@ -23,6 +23,7 @@ class MultipleOption(Option):
 VERSION = '0.6'
 
 def opts():
+    os.chdir(sys.path[0])
     description = """NUS-Downloader, WadManager and TMD-Viewer for Linux"""
     parser = OptionParser(option_class=MultipleOption,
                           usage='usage: qwad [OPTIONS] ARGUMENT',
@@ -31,11 +32,14 @@ def opts():
                       action="extend", type="string",
                       dest='download',
                       metavar='Arguments',
-                      help='IOS <IOS> <Version> <Output> <DeCrypt> <Pack>')
+                      help="IOS Version Output Decrypt Pack")
+    parser.add_option('-u', "--unpack", dest="unpack", action="extend",
+                      type="string", metavar='Arguments', help="unpack a WAD")
+
     parser.add_option('-g', "--getversions", dest="getversions",
                       action="store_true", default=False, help="get available versions for IOS")
     parser.add_option('-c', "--convert", dest="convert",
-		      action="store_true", default=False, help="convert between IOSX and xxxxxxx-xxxxxxx")
+		      action="store_true", default=False, help="convert between IOSxx and hex-value")
     parser.add_option("-v", "--version", dest="version",
 		      action="store_true", default=False, help="print version and exit")
 
@@ -72,6 +76,24 @@ def opts():
 		xarg = NewDict[str(args[0])]
 	        print "%s == %s" % (str(args[0]), xarg)
 	    sys.exit(0)
+
+    if options.unpack:
+	    if os.access(str(options.unpack[0]), os.R_OK):
+		wad = str(options.unpack[0])
+	    else:
+		print "WAD file %s does not exist." % str(options.unpack[0])
+		sys.exit(1)
+	    if os.access(str(args[0]), os.W_OK):
+		folder = str(args[0])
+	    else:
+		os.mkdir(str(args[0]), 0755)
+	    if os.access(str(args[0]), os.W_OK):
+		folder = str(args[0])
+		UnpackingCLI(wad, folder).start()
+	        sys.exit(0)
+	    else:
+		print "Output folder %s not writeable." % str(args[0])
+  		sys.exit(1)
 
 def main():
     # load our own translations
