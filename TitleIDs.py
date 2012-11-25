@@ -96,6 +96,32 @@ TitleDict = {
 
 TitleSwapDict = swap_dic(TitleDict)
 
+ChannelCLIDict = {
+"boot":"BOOT2",
+"bbciplayer":"BBC iPlayer",
+"systemmenu":"System Menu",
+"checkmiiout":"Check Mii Out",
+"digicamprint":"Digicam Print",
+"eula":"EULA",
+"everyonevotes":"Everyone Votes",
+"jamwiththeband":"Jam With The Band",
+"japanfoodservice":"Japan Food Service",
+"mii":"Mii Channel",
+"news":"News",
+"nintendo":"Nintendo",
+"opera":"Opera",
+"photo":"Photo",
+"photo11":"Photo 1.1",
+"regionselect":"Region Select",
+"shashin":"Shashin Channel",
+"shop":"Shop",
+"todaytomorrow":"Today & Tomorrow",
+"tvfriend":"TV Friend / G-Guide",
+"weather":"Weather",
+"wiinoma":"Wii No Ma",
+"wiispeak":"Wii Speak"
+}
+
 ChannelJAPDict = {
 "BOOT2":"0000000100000001",
 "System Menu":"0000000100000002",
