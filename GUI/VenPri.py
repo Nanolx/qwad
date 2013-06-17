@@ -15,6 +15,9 @@ import binascii
 
 CWD = os.getcwd()
 
+def str2bool(v):
+    return v.lower() in ("yes", "true", "t", "1")
+
 class MWQwad(QMainWindow, Ui_Qwad):
     """
     Class documentation goes here.
@@ -342,18 +345,6 @@ class UnpackingCLI(Thread):
             print e
         print "Done"
 
-class UnpackingCLIX(Thread):
-    def __init__(self, wadpath, dirpath):
-        Thread.__init__(self)
-        self.wadpath = wadpath
-        self.dirpath = dirpath
-    def run(self):
-        try:
-            WAD.loadFile(self.wadpath).dumpDir(self.dirpath)
-        except Exception, e:
-            print e
-        print "Done"
-
 class Packing(Unpacking):
     def __init__(self, dirpath, wadpath, QMW, deletedir = False):
         Unpacking.__init__(self, wadpath, dirpath, QMW)
@@ -431,9 +422,9 @@ class nusDownloadingCLI(UnpackingCLI):
             self.version = int(version)
         else:
             self.version = None
-        self.decrypt = decrypt
+	self.decrypt = str2bool(decrypt)
+	self.pack = str2bool(pack)
         self.titleid = titleid
-	self.pack = pack
 	self.outputdir = outputdir
     def run(self):
         try:
@@ -443,7 +434,7 @@ class nusDownloadingCLI(UnpackingCLI):
                 self.packing = PackingCLI(self.dirpath, str(self.outputdir), True)
                 self.packing.start()
             else:
-                NUS(self.titleid,self.version).download(self.dirpath, decrypt = self.decrypt)
+                NUS(self.titleid,self.version).download(self.outputdir, decrypt = self.decrypt)
         except Exception, e:
             print e
 
