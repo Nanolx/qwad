@@ -1,3 +1,4 @@
 #!/bin/sh
+export QWAD_X_DIR="${PWD}"
 PYTHONPATH="/usr/share/Qwad/"
 python /usr/share/Qwad/Qwad.pyw $@

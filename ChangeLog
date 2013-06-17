@@ -1,3 +1,9 @@
+-- 0.7 --
+* cli-options now can properly handle relative paths
+* --tmdinfo does now longer fail when checking an IOS
+* don't enforce decrypt=false on unpacking cli
+* automatic whitespace fixes
+
 -- 0.6 --
 * fixed a string in german translation
 * fixed selecting file in TMD-Viewer

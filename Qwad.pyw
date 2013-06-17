@@ -8,6 +8,11 @@ from PyQt4.QtCore import QTranslator, QString, QLocale
 from GUI.VenPri import MWQwad, nusDownloadingCLI, PackingCLI, UnpackingCLI, ShowTMD
 from TitleIDs import TitleDict, IOSdict, swap_dic, ChannelCLIDict, ChannelJAPDict, ChannelPALDict, ChannelUSADict, ChannelJAPVerDict, ChannelPALVerDict, ChannelUSAVerDict
 
+if os.getenv("QWAD_X_DIR"):
+	os.chdir(os.getenv("QWAD_X_DIR"))
+else:
+	os.chdir(os.getenv("HOME"))
+
 class MultipleOption(Option):
     ACTIONS = Option.ACTIONS + ("extend",)
     STORE_ACTIONS = Option.STORE_ACTIONS + ("extend",)
@@ -20,10 +25,9 @@ class MultipleOption(Option):
         else:
             Option.take_action(self, action, dest, opt, value, values, parser)
 
-VERSION = '0.6'
+VERSION = '0.7'
 
 def opts():
-    os.chdir(sys.path[0])
     description = """NUS-Downloader, WadManager and TMD-Viewer for Linux"""
     parser = OptionParser(option_class=MultipleOption,
                           usage='usage: qwad [OPTIONS] ARGUMENT',
@@ -72,7 +76,7 @@ def opts():
             xarg = TitleDict[str(options.download[0])]
             nusdow = nusDownloadingCLI(int(str(xarg).lower(),16), args[0], args[1], args[2], args[3])
         else:
-	        nusdow = nusDownloadingCLI(int(str(options.download[0]).lower(),16), args[0], args[1], args[2], args[3])
+	    nusdow = nusDownloadingCLI(int(str(options.download[0]).lower(),16), args[0], args[1], args[2], args[3])
         nusdow.start()
         sys.exit(0)
 
@@ -165,8 +169,6 @@ def main():
     # load Qt translations
     qttranslator = QTranslator()
     qttranslator.load(QString("qt_%1").arg(QLocale.system().name()))
-    # change directory in $HOME, so that file-seletors don't start in Qwads source/data directory
-    os.chdir(os.getenv("HOME"))
     # misc stuff
     Vapp = QApplication(sys.argv)
     Vapp.setOrganizationName("Nanolx")

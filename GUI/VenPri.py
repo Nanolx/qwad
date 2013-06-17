@@ -342,6 +342,18 @@ class UnpackingCLI(Thread):
             print e
         print "Done"
 
+class UnpackingCLIX(Thread):
+    def __init__(self, wadpath, dirpath):
+        Thread.__init__(self)
+        self.wadpath = wadpath
+        self.dirpath = dirpath
+    def run(self):
+        try:
+            WAD.loadFile(self.wadpath).dumpDir(self.dirpath)
+        except Exception, e:
+            print e
+        print "Done"
+
 class Packing(Unpacking):
     def __init__(self, dirpath, wadpath, QMW, deletedir = False):
         Unpacking.__init__(self, wadpath, dirpath, QMW)
@@ -349,9 +361,9 @@ class Packing(Unpacking):
     def run(self):
         self.qobject.emit(SIGNAL("working"),PACKING)
         try:
-            print self.dirpath
             print self.wadpath
-            WAD.loadDir(self.dirpath).dumpFile(self.wadpath)
+	    print self.dirpath
+	    WAD.loadDir(self.dirpath).dumpFile(self.wadpath)
             if self.deletedir:
                 print "Cleaning temporary files"
                 self.qobject.emit(SIGNAL("working"),CLEANING)
@@ -393,6 +405,8 @@ class nusDownloading(Unpacking):
             self.version = None
         self.decrypt = decrypt
         self.titleid = titleid
+	print self.titleid
+	print self.version
     def run(self):
         self.qobject.emit(SIGNAL("working"),DOWNLOADING)
         try:
@@ -425,7 +439,7 @@ class nusDownloadingCLI(UnpackingCLI):
         try:
             if self.pack:
                 self.dirpath = tempfile.gettempdir() + "/NUS_"+ str(time.time()).replace(".","")
-                NUS(self.titleid, self.version).download(self.dirpath, decrypt = False)
+                NUS(self.titleid, self.version).download(self.dirpath, decrypt = self.decrypt)
                 self.packing = PackingCLI(self.dirpath, str(self.outputdir), True)
                 self.packing.start()
             else:
@@ -446,7 +460,10 @@ def ShowTMD(tmdpath):
 	print "Title Version      : %s" % tmd.tmd.title_version
 	print "Title Boot Index   : %s" % tmd.tmd.boot_index
 	print "Title Contents     : %s" % tmd.tmd.numcontents
-	print "Title IOS          : %s" % TitleIDs.TitleSwapDict["%s" % ("%016x" % tmd.tmd.iosversion)]
+	if ("%016x" % tmd.tmd.iosversion) == "0000000000000000":
+		print "Title IOS          : --"
+	else:
+		print "Title IOS          : %s" % TitleIDs.TitleSwapDict["%s" % ("%016x" % tmd.tmd.iosversion)]
 	print "Title Access Rights: %s" % tmd.tmd.access_rights
 	print "Title Type         : %s" % tmd.tmd.title_type
 	print "Title Group ID     : %s" % tmd.tmd.group_id
