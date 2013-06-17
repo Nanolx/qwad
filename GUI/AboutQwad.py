@@ -10,7 +10,7 @@ from PyQt4.QtCore import pyqtSignature
 from Ui_AboutQwad import Ui_Dialog
 
 def Version():
-    return "0.7.1"
+    return "0.8"
 def Author():
     return "Christopher Roy Bratusek <nano@tuxfamily.org>"
 
