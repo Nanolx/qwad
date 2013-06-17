@@ -8,10 +8,11 @@ from PyQt4.QtCore import QTranslator, QString, QLocale
 from GUI.VenPri import MWQwad, nusDownloadingCLI, PackingCLI, UnpackingCLI, ShowTMD
 from TitleIDs import TitleDict, IOSdict, swap_dic, ChannelCLIDict, ChannelJAPDict, ChannelPALDict, ChannelUSADict, ChannelJAPVerDict, ChannelPALVerDict, ChannelUSAVerDict
 
-if os.getenv("QWAD_X_DIR"):
-	os.chdir(os.getenv("QWAD_X_DIR"))
-else:
-	os.chdir(os.getenv("HOME"))
+if sys.platform.startswith('linux'):
+	if os.getenv("QWAD_X_DIR"):
+		os.chdir(os.getenv("QWAD_X_DIR"))
+	else:
+		os.chdir(os.getenv("HOME"))
 
 class MultipleOption(Option):
     ACTIONS = Option.ACTIONS + ("extend",)
