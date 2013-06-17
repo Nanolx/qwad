@@ -60,6 +60,13 @@ def opts():
     if options.download:
         if args[0] is "0":
             args[0] = None
+	if sys.platform.startswith('linux'):
+		if args[1].startswith('./'):
+			wadname = str(args[1][2:])
+			args[1] = os.getcwd() + '/' + wadname
+		elif not args[1].startswith('/'):
+			wadname = args[1]
+			args[1] = os.getcwd() + '/' + wadname
         if "." in str(options.download[0]):
             dld = ChannelCLIDict[str(options.download[0][:-4])]
             reg = str(options.download[0][-3:])
