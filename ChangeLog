@@ -1,7 +1,10 @@
--- 0.7.1 --
+-- 0.8 --
+* bugfix: fix relative paths for -d/--download cli on linux
+* bugfix: fix downloading without packgin for -d/--download cli
+* bugfix: titleid for US WiiSpeak has been the PAL version
 * update link to pycrypto installer for Windows in 'DEPS'
-* only chdir on linux (fixes qwad not running on some Windows installation)
-* fix relative paths for -d/--download cli on linux
+* only chdir on linux (not working for some on windows(?))
+* added support for downloading YouTube channel
 
 -- 0.7 --
 * cli-options now can properly handle relative paths
