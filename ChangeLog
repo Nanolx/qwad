@@ -1,5 +1,6 @@
 -- 0.9 --
 * bugfix: fix downloading youtube from cli
+* bugfix: fix tmd-viewer file-chooser not offering all tmd-files
 * update available youtube channel versions
 
 -- 0.8 --
