@@ -1,3 +1,7 @@
+-- 0.9 --
+* bugfix: fix downloading youtube from cli
+* update available youtube channel versions
+
 -- 0.8 --
 * bugfix: fix relative paths for -d/--download cli on linux
 * bugfix: fix downloading without packgin for -d/--download cli

@@ -119,7 +119,8 @@ ChannelCLIDict = {
 "tvfriend":"TV Friend / G-Guide",
 "weather":"Weather",
 "wiinoma":"Wii No Ma",
-"wiispeak":"Wii Speak"
+"wiispeak":"Wii Speak",
+"youtube":"YouTube"
 }
 
 ChannelJAPDict = {
@@ -172,7 +173,7 @@ ChannelJAPVerDict = {
 "Weather":"3, 6, 7",
 "Wii No Ma":"latest",
 "Wii Speak":"1, 256, 512",
-"YouTube":"7"
+"YouTube":"7, 512"
 }
 
 ChannelPALDict = {
@@ -217,7 +218,7 @@ ChannelPALVerDict = {
 "Today & Tomorrow":"latest",
 "Weather":"3, 6, 7",
 "Wii Speak":"1, 256, 512",
-"YouTube":"1, 258"
+"YouTube":"1, 258, 1281"
 }
 
 ChannelUSADict = {
@@ -260,7 +261,7 @@ ChannelUSAVerDict = {
 "Today & Tomorrow":"latest",
 "Weather":"3, 6, 7",
 "Wii Speak":"1, 256, 512",
-"YouTube":"257"
+"YouTube":"257, 1280"
 }
 
 IOSdict = {
