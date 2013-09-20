@@ -4,6 +4,7 @@
 * update available youtube channel versions
 * support downloading skyward sword savegame fix
 * support downloading lovefilm
+* support downloading wii u transfer channel
 
 -- 0.8 --
 * bugfix: fix relative paths for -d/--download cli on linux

@@ -122,6 +122,7 @@ ChannelCLIDict = {
 "weather":"Weather",
 "wiinoma":"Wii No Ma",
 "wiispeak":"Wii Speak",
+"wiiutransfer":"Wii U Transfer Channel",
 "youtube":"YouTube"
 }
 
@@ -149,6 +150,7 @@ ChannelJAPDict = {
 "Weather":"000100024841464A",
 "Wii No Ma":"000100014843494A",
 "Wii Speak":"000100014843464A",
+"Wii U Transfer Channel":"000100014843534A",
 "YouTube":"000100014843584A"
 }
 
@@ -177,6 +179,7 @@ ChannelJAPVerDict = {
 "Weather":"3, 6, 7",
 "Wii No Ma":"latest",
 "Wii Speak":"1, 256, 512",
+"Wii U Transfer Channel":"latest",
 "YouTube":"7, 512"
 }
 
@@ -201,6 +204,7 @@ ChannelPALDict = {
 "Today & Tomorrow":"0001000148415650",
 "Weather":"0001000248414650",
 "Wii Speak":"0001000148434650",
+"Wii U Transfer Channel":"0001000148435350",
 "YouTube":"0001000148435850"
 }
 
@@ -226,6 +230,7 @@ ChannelPALVerDict = {
 "Today & Tomorrow":"latest",
 "Weather":"3, 6, 7",
 "Wii Speak":"1, 256, 512",
+"Wii U Transfer Channel":"257",
 "YouTube":"1, 258, 1281"
 }
 
@@ -249,6 +254,7 @@ ChannelUSADict = {
 "Today & Tomorrow":"0001000148415645",
 "Weather":"0001000248414645",
 "Wii Speak":"0001000148434645",
+"Wii U Transfer Channel":"0001000148435345",
 "YouTube":"0001000148435845"
 }
 
@@ -273,6 +279,7 @@ ChannelUSAVerDict = {
 "Today & Tomorrow":"latest",
 "Weather":"3, 6, 7",
 "Wii Speak":"1, 256, 512",
+"Wii U Transfer Channel":"latest",
 "YouTube":"257, 1280"
 }
 
