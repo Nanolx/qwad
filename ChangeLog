@@ -1,10 +1,11 @@
 -- 0.9 --
 * bugfix: fix downloading youtube from cli
 * bugfix: fix tmd-viewer file-chooser not offering all tmd-files
-* update available youtube channel versions
-* support downloading skyward sword savegame fix
-* support downloading lovefilm
-* support downloading wii u transfer channel
+* update: added new youtube channel versions
+* update: show deactivation info for disabled services channels
+* new: support downloading skyward sword savegame fix
+* new: support downloading lovefilm
+* new: support downloading wii u transfer channel
 
 -- 0.8 --
 * bugfix: fix relative paths for -d/--download cli on linux
