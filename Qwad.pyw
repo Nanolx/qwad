@@ -26,7 +26,7 @@ class MultipleOption(Option):
         else:
             Option.take_action(self, action, dest, opt, value, values, parser)
 
-VERSION = '0.8'
+VERSION = '0.9'
 
 def opts():
     description = """NUS-Downloader, WadManager and TMD-Viewer for Linux"""
