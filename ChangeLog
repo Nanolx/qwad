@@ -2,6 +2,8 @@
 * bugfix: fix downloading youtube from cli
 * bugfix: fix tmd-viewer file-chooser not offering all tmd-files
 * update available youtube channel versions
+* support downloading skyward sword savegame fix
+
 
 -- 0.8 --
 * bugfix: fix relative paths for -d/--download cli on linux
